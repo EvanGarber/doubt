@@ -31,14 +31,3 @@ for everything in time:
     worries.clear()
 tick_away(blank)
 tick()
-
-
-# time.sleep(0.1)
-# for i in range(dimension):
-#     for j in range(dimension*2):
-#         if int((0.3*(j-dimension)**2+(i-dimension//2)**2)**0.5) == radius:
-#             print('#', end='')
-#         else:
-#             print('-', end='')
-#     print()
-# time.sleep(1)
