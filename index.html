@@ -2,36 +2,211 @@
 <html lang="en">
 
 <head>
-    <title>D O U B T</title>
-    <link rel="stylesheet" href="main.scss">
-    <style>
-        *{text-align:center;background-color:#1b1b1b;color:#979797}
-        td{width:50%;}
-        table{margin-left:auto;margin-right:auto;border:2px solid black;width:75%;height:500px}
-    </style>
+    <meta charset="utf-8">
+    <title>d o u b t</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    <h1>D O U B T</h1>
+    <header>
+        <h1>doubt</h1>
+    </header>
+<!--
+    <div class="content">
+        <div class="gif-container">
+            <div class="play-button">
+                <a href="" class="btn"><i class="fa fa-play"></i></a>
+            </div>
+            <div class="name-button">
+                <a href="" class="btn">temporal.py</i></a>
+            </div>
+            <img src="img/temporal.gif" width="240px" height="231px">
+        </div>
+        <div class="code-container">
+            <pre><code>
+exec('''from math import cos as minded_cause, sin as cant_do_it; from time import sleep as tick_away; from curses import endwin as tick, initscr as inevitable
+short = 21;unsolicited = 8;be = 2;complac = 4;entionally = 0.3;unpl = 2;please = 0;blank = 1;petrified = -1;pressure = '#&gt;]-';engulfs_all = 3;time = range(1256)
+moves = 100;goes = 200;forever = 0.005''')
+worries = inevitable()
+# what a waste worrying is, what a shame it is that you can't stop
+def quickly(help, time):
+&nbsp;&nbsp;&nbsp;&nbsp;for its in range(short):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;head = ''
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for too in range(short*2):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if int((entionally*(too-short)**2+(its-short//2)**2)**0.5) == unsolicited:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;head+=pressure[please]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif (abs(int(minded_cause(time)*(its-short//be)*complac)-int(cant_do_it(time)*(too-short)*2))&lt;2 and 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int((entionally*(too-short)**2+(its-short//2)**2)**0.5) &lt;= unsolicited//unpl and 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(too-short) * (blank if minded_cause(time)&gt;please else petrified) &gt;= please and 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(its-short//2) * (blank if cant_do_it(time)&gt;please else petrified) &gt;= please):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;head+=pressure[blank]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif (abs(int(minded_cause(help)*(its-short//be)*complac)-int(cant_do_it(help)*(too-short)*2))&lt;2 and 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int((entionally*(too-short)**2+(its-short//2)**2)**0.5) &lt;= unsolicited and 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(too-short) * (blank if minded_cause(help)&gt;please else petrified) &gt;= please and 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(its-short//2) * (blank if cant_do_it(help)&gt;please else petrified) &gt;= please):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;head+=pressure[be]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;head+=pressure[engulfs_all]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;worries.addstr(its,0,head)
+&nbsp;&nbsp;&nbsp;&nbsp;worries.refresh()
+
+for everything in time:
+&nbsp;&nbsp;&nbsp;&nbsp;quickly(everything/moves, everything/goes)
+&nbsp;&nbsp;&nbsp;&nbsp;tick_away(forever)
+&nbsp;&nbsp;&nbsp;&nbsp;worries.clear()
+tick_away(blank)
+tick()
+                    </code></pre>
+        </div>
+    </div>
+    <div class="content">
+        <div class="gif-container">
+
+        </div>
+        <div class="code-container">
+
+        </div>
+    </div>
+    <div class="content">
+        <div class="gif-container">
+
+        </div>
+        <div class="code-container">
+
+        </div>
+    </div>
+    Might come back to this format, getting a working prototype first-->
     <table>
         <tr>
-            <td>Button, Name<br>Performance/Terminal</td>
-            <td>Code</td>
+            <td class="gif-td"><video autoplay loop muted playsinline width="500px"><source src="img/TemporalGif.mp4" type="video/mp4"></video></td>
+            <td class="code-td">
+                <pre>
+                    <code class="language-python">
+exec('''from math import cos as minded_cause, sin as cant_do_it; from time import sleep as tick_away
+from curses import endwin as tick, initscr as inevitable;short = 21;unsolicited = 8;be = 2;complac = 4;
+entionally = 0.3;unpl = 2;please = 0;blank = 1;petrified = -1;pressure = '#>]-';engulfs_all = 3
+time = range(1256); moves = 100;goes = 200;forever = 0.005''')
+worries = inevitable()
+# what a waste worrying is, what a shame it is that you can't stop
+def quickly(help, time):
+    for its in range(short):
+        head = ''
+        for too in range(short*2):
+            if int((entionally*(too-short)**2+(its-short//2)**2)**0.5) == unsolicited:
+                head+=pressure[please]
+            elif (abs(int(minded_cause(time)*(its-short//be)*complac)-int(cant_do_it(time)*(too-short)*2))<2 and 
+            int((entionally*(too-short)**2+(its-short//2)**2)**0.5) <= unsolicited//unpl and 
+            (too-short) * (blank if minded_cause(time)>please else petrified) >= please and 
+            (its-short//2) * (blank if cant_do_it(time)>please else petrified) >= please):
+                head+=pressure[blank]
+            elif (abs(int(minded_cause(help)*(its-short//be)*complac)-int(cant_do_it(help)*(too-short)*2))<2 and 
+            int((entionally*(too-short)**2+(its-short//2)**2)**0.5) <= unsolicited and 
+            (too-short) * (blank if minded_cause(help)>please else petrified) >= please and 
+            (its-short//2) * (blank if cant_do_it(help)>please else petrified) >= please):
+                head+=pressure[be]
+            else:
+                head+=pressure[engulfs_all]
+        worries.addstr(its,0,head)
+    worries.refresh()
+
+for everything in time:
+    quickly(everything/moves, everything/goes)
+    tick_away(forever)
+    worries.clear()
+tick_away(blank)
+tick()
+                    </code>
+                </pre>
+            </td>
         </tr>
     </table>
     <table>
         <tr>
-            <td>Button, Name<br>Performance/Terminal</td>
-            <td>Code</td>
+            <td class="gif-td"><video autoplay loop muted playsinline width="500px"><source src="img/monster.mp4" type="video/mp4"></video></td>
+            <td class="code-td">
+                <pre>
+                    <code>
+import time, curses
+
+twisted_forms = [['7sBu','2s1u4dBs4d1u','1u1d9s1f1t1b9s1d1u','1d1u9s1b1t1f9s1u1d','3s2d2uBs2u2d','7sBd'],
+['','2s1uJd1u','1u1d9s1f1t1b9s1d1u','1d1u9s1b1t1f9s1u1d','3s2d2uBs2u2d','7sBd'],
+['','2sLu','1u1d9s1f1t1b9s1d1u','1d1u9s1b1t1f9s1u1d','3s2d2uBs2u2d','7sBd'],
+['','','1u3dHu3d1u','1d1u9s1b1t1f9s1u1d','3s2d2uBs2u2d','7sBd'],
+['','','','6d3u8s3u6d','3s2d2u2s8d2s2u2d','7sBd'],
+['','','1u3dHu3d1u','1d1u9s1b1t1f9s1u1d','3s2d2uBs2u2d','7sBd'],
+['','2sLu','1u1d9s1f1t1b9s1d1u','1d1u9s1b1t1f9s1u1d','3s2d2uBs2u2d','7sBd'],
+['','2s1uJd1u','1u1d9s1f1t1b9s1d1u','1d1u9s1b1t1f9s1u1d','3s2d2uBs2u2d','7sBd'],
+['7sBu','2s1u4dBs4d1u','1u1d9s1f1t1b9s1d1u','1d1u9s1b1t1f9s1u1d','3s2d2uBs2u2d','7sBd']]*2
+
+always = curses.initscr()
+
+def always_there(sl):
+    s = ''
+    sw = {'s':' ','u':'_','d':'-','f':'/','b':'\\','t':'|'}
+    for i in range(0, len(sl), 2):
+        for j in range(int(sl[i],32)):
+            s+=sw.get(sl[i+1])
+    always.addstr(s+'\n')
+
+well = (int('THEN',32)//int('12',32))
+# there is a
+def monster():
+    # under every bed
+    # it acts @night; beware
+    for spindly_legs in twisted_forms:
+        #wrap from beneath, just out of sight
+        #but
+        for terror in spindly_legs:
+            #it is
+            always_there(terror)
+        always.refresh()
+        time.sleep(0.08)
+        always.clear()
+# you cannot run from the
+monster()
+# that you can/t always see
+always.clear()
+for there in twisted_forms[0]:
+    # is a form most familiar
+    always_there(there)
+    # your spindly legs
+time.sleep(well)
+curses.endwin()      
+                    </code>
+                </pre>
+            </td>
         </tr>
     </table>
     <table>
         <tr>
-            <td>Button, Name<br>Performance/Terminal</td>
-            <td>Code</td>
+            <td class="gif-td"><video autoplay loop muted playsinline width="500px"><source src="img/life.mp4"></video></td>
+            <td class="code-td"><pre><code>
+import random, time
+
+def life(your_life):
+    for days in your_life:
+        you_can = int('LIVE',32)/(days+1)
+        try:
+            #to not fall apart
+            #make goals
+            print('succeed and fail')
+        except:
+            #we
+            pass
+            #away eventually, try
+        while you_can>0:
+            print(' '*(int(you_can)//10) + 'until you can\'t')
+            you_can -= int('DIE',32)
+        time.sleep(0.5/(days+1))
+
+days_per_year = 365
+years = random.uniform(0,100)
+your_life = range(0, int(days_per_year*years))
+life(your_life)
+            </code></pre></td>
         </tr>
     </table>
-    
 </body>
 
 </html>

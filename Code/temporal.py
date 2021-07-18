@@ -1,7 +1,7 @@
 
 exec('''from math import cos as minded_cause, sin as cant_do_it; from time import sleep as tick_away; from curses import endwin as tick, initscr as inevitable
-short = 21;unsolicited = 8;be = 2;complac = 4;entionally = 0.3;unpl = 2;please = 0;blank = 1;petrified = -1;pressure = '#>]-';engulfs_all = 3;time = range(628*2)
-moves = 100;goes = 200;forever = 0.005''')
+short = 21;unsolicited = 8;be = 2;complac = 4;entionally = 0.3;unpl = 2;please = 0;blank = 1;petrified = -1;pressure = '#>]-';engulfs_all = 3;time = range(628)
+moves = 8.32;goes = 100;forever = 0.005;too_fast=1.57''')
 worries = inevitable()
 # what a waste worrying is, what a shame it is that you can't stop
 def quickly(help, time):
@@ -26,7 +26,7 @@ def quickly(help, time):
     worries.refresh()
 
 for everything in time:
-    quickly(everything/moves, everything/goes)
+    quickly(everything/moves-too_fast, everything/goes-too_fast)
     tick_away(forever)
     worries.clear()
 tick_away(blank)

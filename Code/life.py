@@ -1,4 +1,4 @@
-import random, sys, time
+import random, time
 
 def life(your_life):
     for days in your_life:
