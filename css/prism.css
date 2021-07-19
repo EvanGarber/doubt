@@ -65,7 +65,7 @@ pre[class*="language-"] {
 }
 
 .token.number{
-	color: #61b39a;
+	color: #8c974e;
 }
 
 .token.property,
@@ -88,13 +88,13 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.regex,
 .token.variable {
-	color: #7ec699;
+	color: #619675;
 }
 
 .token.operator,
 .token.entity,
 .token.url {
-	color: #67cdcc;
+	color: #4d9291;
 }
 
 .token.important,
