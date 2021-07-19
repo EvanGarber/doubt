@@ -13,7 +13,9 @@
             var vid1 = document.getElementById(vid);
             vid1.style["opacity"] = "100";
             vid1.play();
-            vid1.addEventListener('ended',function() {this.style["opacity"] = "0"});
+            if(vid1.id != "monster"){
+                vid1.addEventListener('ended',function() {this.style["opacity"] = "0"});
+            }
         }
     </script>
 </head>
