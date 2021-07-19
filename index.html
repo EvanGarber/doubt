@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function play(vid){
+            var vid1 = document.getElementById(vid);
+            vid1.style["opacity"] = "100";
+            vid1.play();
+            vid1.addEventListener('ended',function() {this.style["opacity"] = "0"});
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -81,7 +89,8 @@ tick()
     Might come back to this format, getting a working prototype first-->
     <table>
         <tr>
-            <td class="gif-td"><video autoplay loop muted playsinline width="500px"><source src="img/TemporalGif.mp4" type="video/mp4"></video></td>
+            <td class="gif-td"><a onclick="play('temporal')" class="btn"><i class="fa fa-play"></i> temporal.py</a><br>
+                <div class="outline"><video muted disablePictureInPicture playsinline width="500px" id="temporal"><source src="img/temporal.mp4" type="video/mp4"></video></div></td>
             <td class="code-td">
                 <pre>
                     <code class="language-python">
@@ -125,7 +134,50 @@ tick()
     </table>
     <table>
         <tr>
-            <td class="gif-td"><video autoplay loop muted playsinline width="500px"><source src="img/monster.mp4" type="video/mp4"></video></td>
+            <td class="gif-td"><a onclick="play('bounded')" class="btn"><i class="fa fa-play"></i> bounded.py</a><br>
+                <div class="outline"><video muted disablePictureInPicture playsinline width="500px" id="bounded"><source src="img/bounded.mp4"></video></div></td>
+            <td class="code-td"><pre><code class="language-python">
+import time as wasted, curses, random
+console = curses.initscr()
+maxdx, maxdy, side, positions, midpoint = 10, 5, range(10000), [], (curses.LINES//2, curses.COLS//2)
+curses.curs_set(False)
+
+bounded = 'bounded' #by ambition
+n = len(bounded)
+for i in range(n):
+    positions.append((midpoint[0]-n//2, midpoint[1]-n//2+i, bounded[i]))
+
+def step(positions):
+                                                                                 #don't start:
+    for i in range(len(positions)):
+        step = random.randint(0,3)
+        if step == 0 and positions[i][0]+1<=midpoint[0]+maxdy:
+            positions[i] = (positions[i][0]+1, positions[i][1], positions[i][2]) #go up,
+        elif step == 1 and positions[i][0]-1>=midpoint[0]-maxdy:
+            positions[i] = (positions[i][0]-1, positions[i][1], positions[i][2]) #go down,
+        elif step == 2 and positions[i][1]+1<=midpoint[1]+maxdx:
+            positions[i] = (positions[i][0], positions[i][1]+1, positions[i][2]) #go left,
+        elif step == 3 and positions[i][1]-1>=midpoint[1]-maxdx:
+            positions[i] = (positions[i][0], positions[i][1]-1, positions[i][2]) #go right,
+
+def expose(positions):
+    for pos in positions:
+        console.addstr(pos[0],pos[1],pos[2])
+    console.refresh()
+
+for ever in side:
+    expose(positions) #discover your walls again and again
+    wasted.sleep(2/(ever+1)) #you could be doing so much more
+    step(positions) #do nothing about it, do all the same
+wasted.sleep(1) #you could be doing so much more
+curses.endwin()
+            </code></pre></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="gif-td"><a onclick="play('monster')" class="btn"><i class="fa fa-play"></i> monster.py</a><br>
+                <div class="outline"><video muted disablePictureInPicture playsinline width="500px" id="monster"><source src="img/monster.mp4" type="video/mp4"></video></div></td>
             <td class="code-td">
                 <pre>
                     <code class="language-python">
@@ -182,7 +234,59 @@ curses.endwin()
     </table>
     <table>
         <tr>
-            <td class="gif-td"><video autoplay loop muted playsinline width="500px"><source src="img/life.mp4"></video></td>
+            <td class="gif-td"><a onclick="play('attention')" class="btn"><i class="fa fa-play"></i> attention.py</a><br>
+                <div class="outline"><video muted disablePictureInPicture playsinline width="500px" id="attention"><source src="img/attention.mp4"></video></div></td>
+            <td class="code-td"><pre><code class="language-python">
+import curses; from time import sleep as and_you; from random import randint as ri
+console = curses.initscr()
+curses.curs_set(False)
+
+my_attention = 'may I have your attention, please'
+attention = my_attention.split(' ')
+
+t, hopes = [(curses.LINES//2,curses.COLS//2-len(my_attention)//2,my_attention)], range(len(my_attention))
+truth, life, cant_die, dont_live = range(1500), 100, 0.1, 0.02
+def superficially():
+    console.refresh()
+def live():
+    global t
+    for i, ph in enumerate(t):
+        console.addch(ph[0],ph[1],ph[2][0])
+        t[i] = (ph[0],ph[1]+1,ph[2][1:])
+    t = [p for p in t if len(p[2])>0]
+def we_rebound():
+    s = ri(0,len(attention)-1)
+    e = ri(s+1,len(attention))
+    wl = attention[s:e]
+    for i in range(len(wl)):
+        if ri(0,1):
+            wl[i] = wl[i].upper()
+    ph = ' '.join(wl)
+    x = ri(0,curses.COLS-len(ph)-1)
+    y = ri(0,curses.LINES-1)
+    t.append((y,x,ph))
+
+for this in hopes:
+    live()
+    superficially()
+    and_you(cant_die)
+for this in truth:
+    live()
+    superficially()
+    and_you(dont_live)
+    for all in range(this//life):
+        we_rebound()
+# you can always see the mess in retrospect
+and_you(4) # must
+# remember to remember it
+curses.endwin()
+            </code></pre></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="gif-td"><a onclick="play('life')" class="btn"><i class="fa fa-play"></i> life.py</a><br>
+                <div class="outline"><video muted disablePictureInPicture playsinline width="500px" id="life"><source src="img/life.mp4"></video></div></td>
             <td class="code-td"><pre><code class="language-python">
 import random, time
 

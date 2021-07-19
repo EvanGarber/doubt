@@ -1,9 +1,10 @@
 
-exec('''from math import cos as minded_cause, sin as cant_do_it; from time import sleep as tick_away; from curses import endwin as tick, initscr as inevitable
+exec('''from math import cos as minded_cause, sin as cant_do_it; from time import sleep as tick_away; from curses import endwin as tick, initscr as inevitable, curs_set as shame;
 short = 21;unsolicited = 8;be = 2;complac = 4;entionally = 0.3;unpl = 2;please = 0;blank = 1;petrified = -1;pressure = '#>]-';engulfs_all = 3;time = range(628)
 moves = 8.32;goes = 100;forever = 0.005;too_fast=1.57''')
 worries = inevitable()
-# what a waste worrying is, what a shame it is that you can't stop
+# what a waste worrying is, what a 
+shame(False) # it is that you can't stop
 def quickly(help, time):
     for its in range(short):
         head = ''

@@ -45,12 +45,34 @@ table{
     height: 90%;
 }
 
+br{
+    line-height:100px;
+}
+
 .btn{
+    margin-top:auto;
+    transition: transform 250ms, opacity 750ms;
+    display:inline-block;
     margin: 2%;
-    background: blue;
+    background: #979797;
     color: white;
-    padding: 2%;
+    padding: 1%;
     font-weight:700;
+}
+
+.outline{
+    display:inline-block;
+    border:2px solid #979797;
+}
+
+video{
+    opacity:0;
+}
+
+.btn:hover,
+.btn:focus{
+    transform: scale(1.1);
+    opacity: .8;
 }
 
 header{

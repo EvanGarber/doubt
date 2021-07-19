@@ -6,6 +6,7 @@ twisted_forms = [['7sBu','2s1u4dBs4d1u','1u1d9s1f1t1b9s1d1u','1d1u9s1b1t1f9s1u1d
 ['7sBu','2s1u4dBs4d1u','1u1d9s1f1t1b9s1d1u','1d1u9s1b1t1f9s1u1d','3s2d2uBs2u2d','7sBd']]*2
 
 always = curses.initscr()
+curses.curs_set(False)
 
 def always_there(sl):
     s = ''
